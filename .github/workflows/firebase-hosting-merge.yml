@@ -11,7 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
+      - name: Download Model
+        run: |
+          sudo apt-get install git-lfs
+          git lfs install
+          git clone https://huggingface.co/onnx-community/embeddinggemma-300m-ONNX public/model
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
