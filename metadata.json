@@ -1,0 +1,5 @@
+{
+  "name": "In-Browser Semantic Search with EmbeddingGemma",
+  "description": "A React application that uses the EmbeddingGemma model via Transformers.js to perform client-side semantic search. Users can input a query and several documents to see them ranked by vector similarity.",
+  "requestFramePermissions": []
+}
