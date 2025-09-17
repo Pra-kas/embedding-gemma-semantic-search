@@ -17,10 +17,10 @@
 import { AutoTokenizer, AutoModel, env, matmul } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.2';
 import type { RankedDocument } from '../types';
 
-env.allowLocalModels = true;
-env.allowRemoteModels = false;
+env.allowLocalModels = false;
+env.allowRemoteModels = true;
 
-const MODEL_ID = "/model/";
+const MODEL_ID = "onnx-community/embeddinggemma-300m-ONNX";
 const DTYPE = "q4"; // Options: "fp32" | "q8" | "q4"
 
 const PREFIXES = {
